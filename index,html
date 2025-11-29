@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>FitPulse Gym — Best Gym in Pune | Personal Training & Group Classes</title>
+  <meta name="description" content="FitPulse Gym in Pune — personal trainers, group classes, weight loss programs and transformation success stories. Free trial & downloadable diet plan.">
+  <meta name="keywords" content="Gym in Pune, Personal trainer Pune, Zumba classes Pune, Weight loss training Pune, Affordable gym Pune">
+  <link rel="canonical" href="https://www.fitpulsepune.com/">
+  <meta name="robots" content="index,follow">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="FitPulse Gym — Best Gym in Pune">
+  <meta property="og:description" content="Transform your body with expert trainers. Free trial, group classes, and personalised plans in Pune.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.fitpulsepune.com/">
+  <meta property="og:image" content="/assets/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Tailwind CDN for quick styling (replace with build for production) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- LocalBusiness JSON-LD schema for local SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FitnessCenter",
+    "name": "FitPulse Gym",
+    "image": "https://www.fitpulsepune.com/assets/logo.png",
+    "@id": "https://www.fitpulsepune.com",
+    "url": "https://www.fitpulsepune.com",
+    "telephone": "+91-XXXXXXXXXX",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Fitness Street",
+      "addressLocality": "Pune",
+      "addressRegion": "Maharashtra",
+      "postalCode": "411001",
+      "addressCountry": "IN"
+    },
+    "openingHoursSpecification": [
+      {"@type": "OpeningHoursSpecification","dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "05:30", "closes": "22:00"},
+      {"@type": "OpeningHoursSpecification","dayOfWeek": ["Saturday","Sunday"], "opens": "07:00", "closes": "20:00"}
+    ],
+    "priceRange": "₹₹"
+  }
+  </script>
+
+  <style>
+    /* Small custom overrides */
+    .hero-bg{background-image:linear-gradient(90deg, rgba(3,7,18,0.7), rgba(7,16,32,0.55)), url('/assets/hero-bg.jpg'); background-size:cover;}
+    .floating-wa{position:fixed; right:18px; bottom:18px; z-index:9999}
+  </style>
+</head>
+<body class="antialiased text-gray-800">
+  <!-- NAV -->
+  <header class="bg-white shadow-md sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+      <div class="flex items-center gap-3">
+        <img src="/assets/logo.png" alt="FitPulse logo" class="w-12 h-12 object-contain">
+        <div>
+          <h1 class="font-bold text-xl">FitPulse</h1>
+          <p class="text-sm text-gray-500">Best Gym in Pune</p>
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#home" class="hover:text-blue-600">Home</a>
+        <a href="#services" class="hover:text-blue-600">Services</a>
+        <a href="#trainers" class="hover:text-blue-600">Personal Training</a>
+        <a href="#classes" class="hover:text-blue-600">Group Classes</a>
+        <a href="#gallery" class="hover:text-blue-600">Transformations</a>
+        <a href="#pricing" class="hover:text-blue-600">Pricing</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
+        <a href="#blog" class="bg-blue-600 text-white px-4 py-2 rounded-lg">Blog</a>
+      </nav>
+      <div class="md:hidden">
+        <!-- simple mobile menu button -->
+        <button id="mobileMenuBtn" class="p-2 rounded-lg bg-gray-100">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main id="home">
+    <section class="hero-bg text-white py-24">
+      <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-8">
+        <div class="md:w-1/2">
+          <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">Transform. Train. Triumph.</h2>
+          <p class="mt-4 text-lg text-gray-100 max-w-xl">Join FitPulse — the go-to gym in Pune for personalised weight loss, strength training, and group classes. Sign up for a <strong>free trial</strong> today.</p>
+
+          <div class="mt-6 flex gap-3">
+            <a href="#free-trial" class="bg-green-500 text-white px-5 py-3 rounded-lg font-semibold">Book Free Trial</a>
+            <a href="#pricing" class="bg-transparent border border-white px-5 py-3 rounded-lg">View Pricing</a>
+          </div>
+
+          <ul class="mt-6 text-sm text-gray-200 space-y-2">
+            <li>✔ Certified personal trainers</li>
+            <li>✔ Zumba, HIIT, Yoga & Strength</li>
+            <li>✔ Nutrition plans & transformation tracking</li>
+          </ul>
+        </div>
+        <div class="md:w-1/2">
+          <img src="/assets/hero-cta.png" alt="personal training session at FitPulse" class="w-full rounded-xl shadow-xl">
+        </div>
+      </div>
+    </section>
+
+    <!-- LEAD MAGNET / DOWNLOAD -->
+    <section class="bg-white py-10">
+      <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+        <div>
+          <h3 class="text-2xl font-bold">Download: 7-Day Beginner Diet Plan</h3>
+          <p class="text-sm text-gray-600 mt-2">Free downloadable diet plan — perfect for weight loss or muscle gain beginners. Enter your email to get the PDF.</p>
+        </div>
+        <form id="downloadForm" class="mt-4 md:mt-0 flex gap-2">
+          <input type="email" name="email" placeholder="Your email" required class="px-3 py-2 border rounded-md">
+          <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-md">Get PDF</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-16 bg-gradient-to-b from-gray-50 to-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold">Our Services</h2>
+        <p class="text-gray-600 mt-2">Comprehensive programs designed for every fitness goal.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+          <article class="p-6 bg-white rounded-xl shadow-sm">
+            <h3 class="font-semibold text-xl">Personal Training</h3>
+            <p class="text-sm text-gray-600 mt-2">One-on-one sessions with certified trainers. Custom plans for weight loss, muscle gain, and rehab.</p>
+            <a href="#trainers" class="mt-3 inline-block text-blue-600">Learn more →</a>
+          </article>
+
+          <article class="p-6 bg-white rounded-xl shadow-sm">
+            <h3 class="font-semibold text-xl">Group Classes</h3>
+            <p class="text-sm text-gray-600 mt-2">Zumba, HIIT, Strength Circuits, and Yoga — high-energy classes for all levels.</p>
+            <a href="#classes" class="mt-3 inline-block text-blue-600">Timetable →</a>
+          </article>
+
+          <article class="p-6 bg-white rounded-xl shadow-sm">
+            <h3 class="font-semibold text-xl">Nutrition & Coaching</h3>
+            <p class="text-sm text-gray-600 mt-2">Personalised nutrition plans, progress tracking, and habit coaching to keep you on track.</p>
+            <a href="#contact" class="mt-3 inline-block text-blue-600">Get started →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERSONAL TRAINING / TRAINERS -->
+    <section id="trainers" class="py-16">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold">Personal Training</h2>
+        <p class="text-gray-600 mt-2">Certified trainers match your goals with structured programs.</p>
+
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Trainer card (repeatable) -->
+          <div class="p-6 bg-white rounded-xl shadow-sm">
+            <img src="/assets/trainer-1.jpg" alt="Personal trainer Pune" class="w-full h-40 object-cover rounded">
+            <h4 class="mt-4 font-semibold">Amit Sharma — Strength Coach</h4>
+            <p class="text-sm text-gray-600">Specialises in weight loss and hypertrophy programs.</p>
+            <a href="#contact" class="mt-3 inline-block text-blue-600">Book a consultation →</a>
+          </div>
+
+          <div class="p-6 bg-white rounded-xl shadow-sm">
+            <img src="/assets/trainer-2.jpg" alt="Certified personal trainer Pune" class="w-full h-40 object-cover rounded">
+            <h4 class="mt-4 font-semibold">Sana Patil — Cardio & Conditioning</h4>
+            <p class="text-sm text-gray-600">HIIT specialist and marathon prep coach.</p>
+            <a href="#contact" class="mt-3 inline-block text-blue-600">Book a consultation →</a>
+          </div>
+
+          <div class="p-6 bg-white rounded-xl shadow-sm">
+            <img src="/assets/trainer-3.jpg" alt="Nutrition coach Pune" class="w-full h-40 object-cover rounded">
+            <h4 class="mt-4 font-semibold">Rohit Deshmukh — Nutrition Coach</h4>
+            <p class="text-sm text-gray-600">Personalised meal plans and habit coaching.</p>
+            <a href="#contact" class="mt-3 inline-block text-blue-600">Get plan →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GROUP CLASSES -->
+    <section id="classes" class="py-16 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold">Group Classes & Schedule</h2>
+        <p class="text-gray-600 mt-2">High-energy, community-driven classes for all levels.</p>
+
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 bg-white rounded-xl shadow-sm">
+            <h4 class="font-semibold">Zumba</h4>
+            <p class="text-sm text-gray-600 mt-2">Mon/Wed/Fri — 7:00 PM</p>
+          </div>
+          <div class="p-6 bg-white rounded-xl shadow-sm">
+            <h4 class="font-semibold">HIIT</h4>
+            <p class="text-sm text-gray-600 mt-2">Tue/Thu — 6:00 AM</p>
+          </div>
+          <div class="p-6 bg-white rounded-xl shadow-sm">
+            <h4 class="font-semibold">Yoga</h4>
+            <p class="text-sm text-gray-600 mt-2">Sat/Sun — 8:00 AM</p>
+          </div>
+        </div>
+
+        <p class="text-sm text-gray-500 mt-4">Want the full timetable as a PDF? <a href="#contact" class="text-blue-600">Enquire now</a>.</p>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="py-16">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold">Pricing & Memberships</h2>
+        <p class="text-gray-600 mt-2">Transparent plans for every budget.</p>
+
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 bg-white rounded-xl shadow-sm">
+            <h4 class="font-semibold">Starter</h4>
+            <p class="text-2xl font-bold mt-2">₹1,999 / month</p>
+            <ul class="text-sm mt-3 text-gray-600 space-y-2">
+              <li>Access to gym floor</li>
+              <li>2 group classes/week</li>
+              <li>Monthly check-in</li>
+            </ul>
+            <a href="#membership-enquiry" class="mt-4 inline-block text-blue-600">Enquire →</a>
+          </div>
+
+          <div class="p-6 bg-white rounded-xl shadow-sm border-2 border-blue-600">
+            <h4 class="font-semibold">Pro</h4>
+            <p class="text-2xl font-bold mt-2">₹3,499 / month</p>
+            <ul class="text-sm mt-3 text-gray-600 space-y-2">
+              <li>Unlimited classes</li>
+              <li>1 personal training session/month</li>
+              <li>Nutrition call</li>
+            </ul>
+            <a href="#membership-enquiry" class="mt-4 inline-block text-blue-600">Enquire →</a>
+          </div>
+
+          <div class="p-6 bg-white rounded-xl shadow-sm">
+            <h4 class="font-semibold">Elite</h4>
+            <p class="text-2xl font-bold mt-2">₹6,999 / month</p>
+            <ul class="text-sm mt-3 text-gray-600 space-y-2">
+              <li>Weekly personal training</li>
+              <li>Custom diet + supplements guide</li>
+              <li>Priority booking</li>
+            </ul>
+            <a href="#membership-enquiry" class="mt-4 inline-block text-blue-600">Enquire →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRANSFORMATION GALLERY -->
+    <section id="gallery" class="py-16 bg-gradient-to-b from-white to-gray-50">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold">Transformation Gallery</h2>
+        <p class="text-gray-600 mt-2">Real members, real results.</p>
+
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+          <figure class="bg-white rounded-lg overflow-hidden shadow-sm">
+            <img src="/assets/trans1-before.jpg" alt="before and after weight loss Pune" class="w-full h-64 object-cover">
+            <figcaption class="p-4 text-sm">+18 kg loss in 4 months — Priya</figcaption>
+          </figure>
+
+          <figure class="bg-white rounded-lg overflow-hidden shadow-sm">
+            <img src="/assets/trans2-before.jpg" alt="gym transformation Pune" class="w-full h-64 object-cover">
+            <figcaption class="p-4 text-sm">Strength gains — Raj (12 weeks)</figcaption>
+          </figure>
+
+          <figure class="bg-white rounded-lg overflow-hidden shadow-sm">
+            <img src="/assets/trans3-before.jpg" alt="fitness transformation Pune" class="w-full h-64 object-cover">
+            <figcaption class="p-4 text-sm">Postpartum fitness — Neha</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG (SEO-Focused excerpt) -->
+    <section id="blog" class="py-16">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold">From the Blog</h2>
+        <p class="text-gray-600 mt-2">SEO-focused long-form posts to capture search traffic (eg. "Best gym in Pune: How to pick the right trainer").</p>
+
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <article class="p-4 bg-white rounded shadow-sm">
+            <h4 class="font-semibold">How to choose a gym in Pune (2025 guide)</h4>
+            <p class="text-sm text-gray-600 mt-2">Local SEO target: "Gym in Pune", "Best gym near me" — long-form content, local landmarks, pricing comparisons.</p>
+            <a href="#" class="text-blue-600 mt-3 inline-block">Read more →</a>
+          </article>
+
+          <article class="p-4 bg-white rounded shadow-sm">
+            <h4 class="font-semibold">Weight loss training: 6 beginner mistakes</h4>
+            <p class="text-sm text-gray-600 mt-2">Target: "Weight loss training Pune" — include case studies and CTAs for free trial.</p>
+            <a href="#" class="text-blue-600 mt-3 inline-block">Read more →</a>
+          </article>
+
+          <article class="p-4 bg-white rounded shadow-sm">
+            <h4 class="font-semibold">Zumba vs HIIT: Which is right for you?</h4>
+            <p class="text-sm text-gray-600 mt-2">Target: "Zumba classes Pune" — include schedule & local class reviews.</p>
+            <a href="#" class="text-blue-600 mt-3 inline-block">Read more →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT + MAP + FORMS -->
+    <section id="contact" class="py-16 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8">
+        <div>
+          <h2 class="text-2xl font-bold">Contact & Visit Us</h2>
+          <p class="text-gray-600 mt-2">123 Fitness Street, Pune. Open daily 5:30 AM – 10:00 PM.</p>
+
+          <!-- Embedded Google Map (replace src with your Google Maps embed link) -->
+          <div class="mt-4 w-full h-64 bg-gray-200">Map embed placeholder — replace with Google Maps iframe.</div>
+
+          <div class="mt-4">
+            <p class="text-sm">Phone: <a href="tel:+91XXXXXXXXXX" class="text-blue-600">+91 XXXXXXXXXX</a></p>
+            <p class="text-sm">Email: <a href="mailto:hello@fitpulsepune.com" class="text-blue-600">hello@fitpulsepune.com</a></p>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold">Send an enquiry</h3>
+          <form id="contactForm" class="mt-4 grid gap-3">
+            <input type="text" name="name" placeholder="Your name" required class="px-3 py-2 border rounded-md">
+            <input type="email" name="email" placeholder="Email" required class="px-3 py-2 border rounded-md">
+            <input type="tel" name="phone" placeholder="Phone" required class="px-3 py-2 border rounded-md">
+            <select name="enquiry" class="px-3 py-2 border rounded-md">
+              <option>Membership enquiry</option>
+              <option>Personal training</option>
+              <option>Group classes</option>
+              <option>Diet plan</option>
+            </select>
+            <textarea name="message" rows="4" placeholder="How can we help?" class="px-3 py-2 border rounded-md"></textarea>
+            <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-md">Send enquiry</button>
+          </form>
+
+          <div id="contactSuccess" class="hidden mt-4 p-3 bg-green-100 rounded">Thanks — we'll get back to you within 24 hours.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FREE TRIAL & MEMBERSHIP ENQUIRY SECTION (Anchor targets for CTAs) -->
+    <section id="free-trial" class="py-12">
+      <div class="max-w-4xl mx-auto px-6 text-center bg-white p-8 rounded-xl shadow-md">
+        <h3 class="text-2xl font-bold">Claim Your Free Trial</h3>
+        <p class="text-gray-600 mt-2">Fill the form and show up — first session free.</p>
+        <form id="freeTrialForm" class="mt-4 grid md:grid-cols-2 gap-3">
+          <input name="ft_name" placeholder="Name" required class="px-3 py-2 border rounded-md">
+          <input name="ft_phone" placeholder="Phone" required class="px-3 py-2 border rounded-md">
+          <input name="ft_email" placeholder="Email" class="px-3 py-2 border rounded-md">
+          <select name="ft_pref" class="px-3 py-2 border rounded-md">
+            <option>Personal Training</option>
+            <option>Group Class</option>
+            <option>Nutrition Consultation</option>
+          </select>
+          <button class="md:col-span-2 px-4 py-2 bg-green-600 text-white rounded-md">Book Free Trial</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="membership-enquiry" class="py-12">
+      <div class="max-w-4xl mx-auto px-6 text-center bg-white p-8 rounded-xl shadow-md">
+        <h3 class="text-2xl font-bold">Membership Enquiry</h3>
+        <form id="membershipForm" class="mt-4 grid gap-3">
+          <input name="m_name" placeholder="Name" required class="px-3 py-2 border rounded-md">
+          <input name="m_phone" placeholder="Phone" required class="px-3 py-2 border rounded-md">
+          <select name="m_plan" class="px-3 py-2 border rounded-md">
+            <option>Starter</option>
+            <option>Pro</option>
+            <option>Elite</option>
+          </select>
+          <button class="px-4 py-2 bg-blue-600 text-white rounded-md">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- EXIT INTENT POPUP (hidden initially) -->
+    <div id="exitPopup" class="hidden fixed inset-0 bg-black bg-opacity-60 z-50 items-center justify-center">
+      <div class="bg-white p-6 rounded-xl max-w-md mx-auto">
+        <h4 class="text-xl font-bold">Wait — grab your free plan!</h4>
+        <p class="text-sm text-gray-600 mt-2">Before you go: download our free 7-day diet plan and claim a free trial class.</p>
+        <div class="mt-4 flex gap-3">
+          <button id="exitDownload" class="px-4 py-2 bg-green-600 text-white rounded">Get Diet Plan</button>
+          <button id="exitClose" class="px-4 py-2 border rounded">No thanks</button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-200 py-8 mt-12">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-6">
+      <div>
+        <h5 class="font-semibold">FitPulse</h5>
+        <p class="text-sm text-gray-400 mt-2">Best gym in Pune — personal trainers, group classes, nutrition plans.</p>
+      </div>
+      <div>
+        <h5 class="font-semibold">Quick links</h5>
+        <ul class="text-sm mt-2 space-y-2 text-gray-400">
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#gallery">Transformations</a></li>
+          <li><a href="#blog">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-semibold">Contact</h5>
+        <p class="text-sm text-gray-400 mt-2">+91 XXXXXXXXXX</p>
+        <p class="text-sm text-gray-400">hello@fitpulsepune.com</p>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-6 text-sm text-gray-500 mt-6">© FitPulse Gym — <span id="year"></span></div>
+  </footer>
+
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <a class="floating-wa" href="https://wa.me/91XXXXXXXXXX?text=Hi%20FitPulse%20-%20I%27m%20interested%20in%20a%20free%20trial" target="_blank" rel="noopener noreferrer">
+    <img src="/assets/whatsapp.svg" alt="WhatsApp" class="w-14 h-14 shadow-lg rounded-full">
+  </a>
+
+  <!-- SCRIPTS: Forms, Exit-Intent, Mobile Menu, Basic Analytics Hooks -->
+  <script>
+    // Replace contact form submissions with actual backend endpoints or Zapier/Integromat webhook URLs
+    function handleFormSubmit(ev, successEl) {
+      ev.preventDefault();
+      const data = new FormData(ev.target);
+      // TODO: send 'data' to your CRM / webhook
+      console.log('Form submit (simulate):', Object.fromEntries(data.entries()));
+      if(successEl) successEl.classList.remove('hidden');
+      ev.target.reset();
+    }
+
+    document.getElementById('contactForm').addEventListener('submit', (e)=> handleFormSubmit(e, document.getElementById('contactSuccess')));
+    document.getElementById('freeTrialForm').addEventListener('submit', (e)=> handleFormSubmit(e));
+    document.getElementById('membershipForm').addEventListener('submit', (e)=> handleFormSubmit(e));
+    document.getElementById('downloadForm').addEventListener('submit', (e)=> {
+      e.preventDefault();
+      // ideally push to email list then show download
+      alert('Thanks! Check your email for the 7-day diet plan (this is a demo).');
+      e.target.reset();
+    });
+
+    // Exit intent popup (desktop: mouseout toward top), show once per session
+    let exitShown = sessionStorage.getItem('exitShown');
+    function showExitPopup(){
+      if(exitShown) return;
+      document.getElementById('exitPopup').classList.remove('hidden');
+      document.getElementById('exitPopup').style.display = 'flex';
+      sessionStorage.setItem('exitShown', '1');
+    }
+    document.addEventListener('mouseout', function(e){
+      if(e.clientY < 10) showExitPopup();
+    });
+    document.getElementById('exitClose').addEventListener('click', ()=> document.getElementById('exitPopup').classList.add('hidden'));
+    document.getElementById('exitDownload').addEventListener('click', ()=> { window.location.href='/assets/7-day-diet-plan.pdf'; });
+
+    // Mobile menu toggle
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    mobileBtn && mobileBtn.addEventListener('click', ()=>{
+      // naive mobile nav (improve for production)
+      alert('Open mobile menu (demo)');
+    });
+
+    // Set year in footer
+    document.getElementById('year').innerText = new Date().getFullYear();
+
+    // Basic analytics event hooks (replace with real analytics)
+    function trackEvent(name, payload){ console.log('track', name, payload); }
+  </script>
+
+</body>
+</html>
